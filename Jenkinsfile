@@ -3,7 +3,7 @@ pipeline {
     agent any
     
     environment {
-	SCANNER_HOME                = tool 'sonar-scanner'
+	SCANNER_HOME           = tool 'sonar-scanner'
         dockerHubCredentialsID = 'DockerHub'                          // DockerHub credentials ID.
         imageName              = 'saeedkouta/ivolve-test1'            // DockerHub repo/image name.
         openshiftCredentialsID = 'openshift-token'                    // Service account token credentials ID
@@ -68,7 +68,7 @@ pipeline {
         stage('Deploy on OpenShift Cluster') {
             steps {
                 script {
-                    dir('application') {
+                    dir('openshift') {
                         deployToOpenShift(openshiftCredentialsID, openshiftClusterURL, openshiftProject, imageName, BUILD_NUMBER)
                     }
                 }
