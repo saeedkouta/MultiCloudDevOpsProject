@@ -9,19 +9,19 @@
   
 - name: Fetch Jenkins password
   retries: 5  # Retry up to 5 times
-  delay: 10 
+  delay: 10  # Wait for 10 seconds between retries
   command: docker exec -u 0 jenkins cat /var/jenkins_home/secrets/initialAdminPassword
   register: jenkins_initial_password
   
 - debug:
     var: jenkins_initial_password.stdout
-
+    
 - name: Install Java 17 inside Jenkins container
-  retries: 5  # Retry up to 5 times
-  delay: 10   # Wait for 10 seconds between retries
+  retries: 5  
+  delay: 10   
   command: docker exec -u 0 jenkins bash -c "apt-get update && apt-get install -y wget && wget -O /tmp/openjdk-17_linux-x64_bin.tar.gz https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz && mkdir -p /opt/java/openjdk && tar -zxvf /tmp/openjdk-17_linux-x64_bin.tar.gz -C /opt/java/openjdk --strip-components=1 && update-alternatives --install /usr/bin/java java /opt/java/openjdk/bin/java 1 && update-alternatives --set java /opt/java/openjdk/bin/java"
   register: java_install_result
-  until: java_install_result.rc == 0  # Retry until the command succeeds
+  until: java_install_result.rc == 0  
   
 - name: Install Docker CLI inside Jenkins container
   shell: |
