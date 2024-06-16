@@ -46,3 +46,18 @@ resource "aws_cloudwatch_metric_alarm" "high_disk_utilization" {
   }
 }
 
+resource "aws_cloudwatch_metric_alarm" "high_storage_utilization" {
+  alarm_name          = "high-storage-utilization-${var.instance_id}"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
+  evaluation_periods  = 2
+  metric_name         = "VolumeConsumedReadWriteOps"
+  namespace           = "AWS/EBS"
+  period              = 300
+  statistic           = "Average"
+  threshold           = var.storage_threshold
+  alarm_description   = "Alarm when Storage exceeds ${var.storage_threshold} operations"
+  alarm_actions       = [var.alarm_sns_topic_arn]
+  dimensions = {
+    VolumeId = var.volume_id
+  }
+}
