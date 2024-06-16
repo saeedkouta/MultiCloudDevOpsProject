@@ -1,0 +1,13 @@
+---
+- name: ivolve-project
+  hosts: ec2
+  remote_user: ubuntu
+  gather_facts: false
+  become: true
+
+  roles:
+     - docker
+     - jenkins
+     - git
+     - openshift
+     - sonarqube
