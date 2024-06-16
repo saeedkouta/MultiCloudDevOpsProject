@@ -5,7 +5,7 @@ pipeline {
     environment {
 	SCANNER_HOME           = tool 'sonar-scanner'
         dockerHubCredentialsID = 'DockerHub'                          // DockerHub credentials ID.
-        imageName              = 'saeedkouta/ivolve-test1'            // DockerHub repo/image name.
+        imageName              = 'saeedkouta/ivolve-project'            // DockerHub repo/image name.
         openshiftCredentialsID = 'openshift-token'                    // Service account token credentials ID
         openshiftClusterURL    = 'https://api.ocp-training.ivolve-test.com:6443' // OpenShift Cluster URL.
         openshiftProject       = 'saeedkouta'                         // OpenShift project name.
