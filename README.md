@@ -43,82 +43,26 @@ dev Branch: Used for development work.
 
 ## Step 2: Infrastructure Provisioning with Terraform
 
-### 1- Create Provider Module
+### What is Terraform?
 
-├── [**main.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/provider/main.tf)
-<br />
-└── [**variables.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/provider/variables.tf)
+Terraform is an open-source Infrastructure as Code (IaC) tool created by HashiCorp. It allows users to define and provision data center infrastructure using a high-level configuration language. By writing declarative configuration files, users can specify the desired state of their infrastructure, and Terraform will handle the creation, update, and deletion of resources to match that state.
 
-### 2- Create Vpc Module:
+### Purpose of Terraform
 
-├── [**main.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/vpc/main.tf)
-<br />
-├── [**variables.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/vpc/variables.tf)
-<br />
-└── [**output.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/vpc/output.tf)
+The primary purpose of Terraform is to enable consistent, reproducible, and automated infrastructure management. It helps to:
 
-#### 2.1. main.tf file:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/4e9a10c3-ca82-489b-8e43-0ab651726689" width="1000">
+1. **Simplify Infrastructure Management**: By using configuration files, Terraform makes it easy to manage and version control infrastructure changes.
+2. **Ensure Consistency**: Terraform provides a unified way to define infrastructure, ensuring consistency across environments and reducing configuration drift.
+3. **Improve Collaboration**: Teams can collaborate on infrastructure changes by reviewing and version controlling Terraform configuration files.
+4. **Enable Infrastructure as Code (IaC)**: Terraform allows infrastructure to be treated as code, which means it can be tested, validated, and automated like software code.
+5. **Multi-Cloud and Provider Agnostic**: Terraform supports multiple cloud providers and services, allowing for a consistent approach to infrastructure management across different environments.
 
-#### 2.2. variables.tf file:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/6137046b-04eb-43d2-8d26-2203ee8c1fe3" width="1000">
+Using Terraform, organizations can achieve greater efficiency, reliability, and scalability in their infrastructure operations, leading to faster deployment cycles and reduced operational overhead.
 
-#### 2.3. output.tf file:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/d06a6072-68d3-4ac5-8ad4-af67310b3be2" width="1000">
+### Overview
+[**Terraform Modules README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/tree/dev/terraform#readme)
 
-### 3- Create IGW Module:
-
-├── [**main.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/internet_gateway/main.tf)
-<br />
-├── [**variables.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/internet_gateway/variables.tf)
-<br />
-└── [**output.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/internet_gateway/output.tf)
-
-#### 3.1. main.tf file:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c42566f5-296b-4ada-896e-48d2e3bb6aab" width="1000">
-
-#### 3.2. variables.tf:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/ab7b4a3f-763f-4190-bc32-7d41ee04d913" width="1000">
-
-#### 3.3. output.tf
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/565cb972-130c-4a22-b9c6-641d8ae7bddf" width="1000">
-
-### 4- Create Route Table Module:
-
-├── [**main.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/route_table/main.tf)
-<br />
-├── [**variables.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/route_table/variables.tf)
-<br />
-└── [**output.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/route_table/output.tf)
-
-#### 4.1. main.tf file:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/eddf5087-5b2a-4f37-b840-af4eeb1c87ca" width="1000">
-
-#### 4.2. variables.tf:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/cc1061b9-5de4-4457-b615-29a01ad73612" width="1000">
-
-#### 4.3. output.tf
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/372284ef-a0ff-4244-af25-b0f68ac7957f" width="1000">
-
-### 5- Create Subnet Module:
-
-├── [**main.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/subnet/main.tf)
-<br />
-├── [**variables.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/subnet/variables.tf)
-<br />
-└── [**output.tf**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/terraform/modules/subnet/variables.tf)
-
-#### 5.1. main.tf file:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/248a4964-a2ab-498f-880e-54ee7929f2e6" width="1000">
-
-#### 5.2. variables.tf:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/3365b36a-6ae3-4dfd-a3e7-2c31a2450385" width="1000">
-
-#### 5.3. output.tf
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/7d29a008-118c-42b9-a880-b8313602fe5a" width="1000">
-
-
-
+This README file documents my process of creating Terraform modules. It includes all the necessary steps in details and screenshots of the configurations used in each module.
 
 
 
