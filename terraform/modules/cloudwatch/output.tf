@@ -10,3 +10,6 @@ output "disk_alarm_id" {
   value = aws_cloudwatch_metric_alarm.high_disk_utilization.id
 }
 
+output "storage_alarm_id" {
+  value = aws_cloudwatch_metric_alarm.high_storage_utilization.id
+}
