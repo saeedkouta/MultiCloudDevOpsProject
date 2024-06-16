@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ivolve-project-deployment
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: ivolve-project
