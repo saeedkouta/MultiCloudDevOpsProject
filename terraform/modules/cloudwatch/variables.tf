@@ -26,3 +26,13 @@ variable "disk_threshold" {
   description = "Disk utilization threshold percentage that triggers the alarm."
 }
 
+variable "storage_threshold" {
+  type        = number
+  default     = 3000
+  description = "Storage threshold for read/write operations that triggers the alarm."
+}
+
+variable "volume_id" {
+  type        = string
+  description = "EBS volume ID to monitor."
+}
