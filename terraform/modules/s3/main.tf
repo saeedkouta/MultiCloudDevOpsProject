@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_state" {
-    bucket = "ivolve-bucket"
+    bucket = "saeed-ivolve-bucket"
 }
 
 resource "aws_s3_bucket_versioning" "terraform_state_versioning" {
