@@ -25,6 +25,8 @@
       POSTGRES_DB: sonarqube
     volumes:
       - postgresql:/var/lib/postgresql/data
+    cpu_limit: 1
+    memory_limit: 2g
 
 - name: Pull SonarQube image
   docker_image:
@@ -51,4 +53,6 @@
       - sonarqube_extensions:/opt/sonarqube/extensions
     links:
       - sonarqube_db
+    cpu_limit: 1
+    memory_limit: 2g
 

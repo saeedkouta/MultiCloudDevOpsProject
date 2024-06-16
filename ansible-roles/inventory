@@ -1,2 +1,2 @@
 [ec2]
-100.25.34.115
+{{ public_ip }} ansible_user=ubuntu

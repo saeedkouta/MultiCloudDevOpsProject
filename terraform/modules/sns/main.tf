@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "ivolve-sns" {
-  name = "alarm-topic"
+  name = "ivolve-alarm"
 }
 
 resource "aws_sns_topic_subscription" "email_subscription" {
