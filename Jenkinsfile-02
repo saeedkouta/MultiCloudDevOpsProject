@@ -31,17 +31,6 @@ pipeline {
     	    }
 	    }
 
-        stage('Run Code Compile') {
-            steps {
-                script {
-                	// Navigate to the directory contains the Application
-                	dir('application') {
-                		codecompile()
-            		}
-        	    }
-    	    }
-	    }
-
         stage('Run SonarQube Analysis') {
             steps {
                 script {
