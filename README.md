@@ -177,6 +177,18 @@ The second Jenkins pipeline integrates SonarQube with Jenkins using a shared lib
 - **Stage 5: Deploy to OpenShift**:
   - Deploys the application as a containerized service on an OpenShift cluster.
   - Creates necessary Kubernetes resources (deployment, service) and exposes the service for external access.
+
+### Integration with [Shared Library](https://github.com/saeedkouta/MultiCloudProject_shared_library.git)
+
+pipelines utilize a shared library in Jenkins to encapsulate and reuse pipeline logic across different projects, promoting consistency and efficiency in pipeline management.
+
+### Benefits of Automation
+
+- **Efficiency**: Automates infrastructure provisioning and software deployment, reducing manual effort and potential errors.
+
+- **Quality Assurance**: Integrates automated testing and code analysis to maintain high code quality standards throughout the development lifecycle.
+
+- **DevOps Practices**: Implements DevOps principles by automating CI/CD processes and promoting collaboration between development and operations teams.
  
 ### Step 1: Openshift Deployment and Service files
 
@@ -243,7 +255,7 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 `manage jenkins` > `system` > `SonarQube Servers`
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c06fc0d2-8b3b-43e6-b940-be5c120a7adc" width="1000" >
 
-#### 5- Add Shared_library
+#### 5- Add [Shared_library](https://github.com/saeedkouta/MultiCloudProject_shared_library.git)
 `manage jenkins` > `system` > `Global Pipeline Libraries`
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/59429cc8-5099-4a1d-b0bf-59880208ed52" width="1000" >
 
@@ -274,23 +286,22 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/14d7f56d-044d-4b60-91e8-fc27945d748d" width="1000" >
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/7bcbdb3c-a2ab-4929-aa82-d9fac8ee1ccd" width="1000" >
 
+### Deploy To Openshift Stage:
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/2e7ea5eb-72e0-4f3a-89aa-66e464659272" width="1000" >
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/79486577-0007-4f28-b305-6fa696ffa290" width="1000" >
+
+### the Screenshots of OpenShift components that Created is in the [openshift README file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/openshift/README.md) 
+
+### The Application WebPage:
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/79486577-0007-4f28-b305-6fa696ffa290" width="1000" >
 
 
 
 
-This README file details the creation and use of Ansible Roles for automation tasks. It includes comprehensive steps, configuration details, and screenshots illustrating the setup and execution of each role.
 
-### Integration with Shared Library
 
-Both pipelines utilize a shared library in Jenkins to encapsulate and reuse pipeline logic across different projects, promoting consistency and efficiency in pipeline management.
 
-### Benefits of Automation
 
-- **Efficiency**: Automates infrastructure provisioning and software deployment, reducing manual effort and potential errors.
-
-- **Quality Assurance**: Integrates automated testing and code analysis to maintain high code quality standards throughout the development lifecycle.
-
-- **DevOps Practices**: Implements DevOps principles by automating CI/CD processes and promoting collaboration between development and operations teams.
 
 
 
