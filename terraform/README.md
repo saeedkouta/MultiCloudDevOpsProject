@@ -228,7 +228,7 @@ Terraform modules are a fundamental component of Terraform's architecture, enabl
 ```bash
 terraform init
 ```
-### Purpose:
+### terraform init Purpose:
 
 terraform init initializes a new or existing Terraform configuration.
 It initializes the working directory containing Terraform configuration files (*.tf files).
@@ -238,7 +238,7 @@ This command prepares the environment for Terraform to manage your infrastructur
 ```bash
 terraform plan
 ```
-### Purpose:
+### terraform plan Purpose:
 
 terraform plan generates an execution plan for Terraform.
 It compares the current state of the infrastructure (as recorded by Terraform state) with the desired state defined in your configuration files.
@@ -247,7 +247,7 @@ This command calculates and shows the changes that Terraform will apply when you
 ```bash
 terraform apply
 ```
-### Purpose:
+### terraform apply Purpose:
 
 terraform apply applies the changes required to achieve the desired state defined in your Terraform configuration.
 It creates, modifies, or deletes resources as necessary to match the configuration.
