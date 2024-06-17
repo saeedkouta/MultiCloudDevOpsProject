@@ -364,6 +364,23 @@ This README file details the creation and use of openshift deployment. It includ
 
 #### 1-  first create postgresql database then link it to sonarqube to be able to work
 
+## Documentation Resources
+
+This table provides links to helpful documentation for the used tools and technologies:
+
+| Documentation | Resource Link |
+|---|---|
+| Ansible | [Ansible Documentation](https://docs.ansible.com/) |
+| Ansible Galaxy | [Ansible Galaxy](https://galaxy.ansible.com/) |
+| Jenkins | [Jenkins Documentation](https://jenkins.io/doc/) |
+| Docker | [Docker Documentation](https://docs.docker.com/) |
+| Terraform | [Terraform Documentation](https://www.terraform.io/docs/) |
+| OpenShift | [OpenShift Documentation](https://docs.openshift.com/) |
+| SonarQube | [SonarQube Documentation](https://docs.sonarqube.org/) |
+| PostgreSQL | [PostgreSQL Documentation](https://www.postgresql.org/docs/) |
+| Spring Boot | [Spring Boot Documentation](https://spring.io/guides/spring-boot/) |
+| GitHub | [GitHub Documentation](https://docs.github.com/) |
+| AWS | [AWS Documentation](https://aws.amazon.com/documentation/) |
 
 
 
