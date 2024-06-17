@@ -120,6 +120,10 @@ This README file details the creation and use of Ansible Roles for automation ta
 
 ### Step 4: Configure Jenkins to Run the Pipeline
 
+#### what is Jenkins ?
+
+Jenkins is an open-source automation server widely used for continuous integration and continuous delivery (CI/CD). It allows developers to automate the building, testing, and deployment of applications, facilitating faster and more reliable software development. Jenkins supports a vast array of plugins to integrate with various development, testing, and deployment tools, making it highly flexible and customizable to suit different project needs. Its primary purpose is to streamline the software development lifecycle, ensuring code changes are continuously integrated and delivered efficiently.
+
 #### 1- Open Jenkins and Add the Required Credintials 
 
 #### To Add Credintials go to `manage jenkins` > `Credintials`
@@ -155,6 +159,31 @@ This README file details the creation and use of Ansible Roles for automation ta
 ### Step 6: Show the provisioned infrastructure
 
  it's in the last part of [**Terraform Modules README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/tree/dev/terraform#readme)
+
+### Step 7: Test The Monotoring 
+
+#### 1- Check the Cloud Watch Alarms 
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/b20a7c57-4658-43b2-9cb2-d58d200e2874" width="1000" >
+
+#### 2- Check sns topic and confirm the subscreption
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/03acf5ac-2cce-475d-8f7c-2e72651d1a8b" width="1000" >
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/80917f0f-9583-419b-8637-9bc58b58b87c" width="1000" >
+
+#### 3- Create script to load the cpu:
+[**Load-script.sh**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/scripts/load-script.sh)
+
+#### Run it Twice ivolve.sh & script.sh :
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/64887c3a-34da-42f5-849c-775453f0b5ef" width="1000" >
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/0a88feab-37d1-46c7-9881-26c0dc2a9602" width="1000" >
+
+#### 4- check the Cloud Watch Alarms Again :
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/041282cc-1d37-4c63-866b-10fb41b8887c" width="1000" >
+
+#### the cpu utilization comes above 60% For more than 5 minutes
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/d86eaa32-4960-4f3c-bb6e-7e28527d8df8" width="1000" >
+
+#### 5- Check the Gmail For the Sns Email:
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/d59154d5-81f4-4dd2-8a9c-7281af07eec6" width="1000" >
 
 ## Pipeline 2: Jenkins, SonarQube, Docker, OpenShift Integration
 
@@ -200,7 +229,7 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 
 This README file details the creation and use of openshift deployment. It includes comprehensive steps, configuration details, and screenshots of openshift deployment and service.
 
-### Step 2: Create ServiceAccount and give it role then Extract the token
+### Step 2: Create openshift ServiceAccount and give it role then Extract the token
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/84c45259-c4a8-47a0-ac33-ffdc0154b75f" width="1000" >
 
 ### Step 3: Access to the SonarQube Container
@@ -249,18 +278,22 @@ This README file details the creation and use of openshift deployment. It includ
 
 #### 2- install sonar-scanner Plugin:
 `manage jenkins` > `plugins` > `available plugins`
+
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/9ac9e5db-e9e5-41f7-81b3-e1c25ab70987" width="1000" >
 
 #### 3- Configure the sonar-scanner tool:
 `manage jenkins` > `tools` > `sonarqube-scanner installations`
+
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/f084794f-1be4-4c91-af7d-c7f787ab358e" width="1000" >
 
 #### 4- Configure SonarQube-server
 `manage jenkins` > `system` > `SonarQube Servers`
+
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c06fc0d2-8b3b-43e6-b940-be5c120a7adc" width="1000" >
 
 #### 5- Add [Shared_library](https://github.com/saeedkouta/MultiCloudProject_shared_library.git)
 `manage jenkins` > `system` > `Global Pipeline Libraries`
+
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/59429cc8-5099-4a1d-b0bf-59880208ed52" width="1000" >
 
 ### Step 4: Create and Build a Pipeline
@@ -298,6 +331,40 @@ This README file details the creation and use of openshift deployment. It includ
 
 ### The Application WebPage:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/901f53fb-f0a7-437f-80a8-29d630039f2e" width="1000" >
+
+### Step 5: Create Pull Request
+
+#### 1- Create Pull Request to add the changes to the main branch:
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/0f74baf5-0131-4eb2-9883-04fc88acbf7e" width="1000" >
+
+#### 2- Mergie pull request:
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/ec942d90-309f-458a-8f62-29977fd5e56d" width="1000" >
+
+## Troubleshooting
+
+### With `Terraform`
+
+#### 1- make sure to specify the ec2 storage
+
+#### 2- create s3 bucket and dynamoDB table Beform run backend module
+
+### With `Ansible-Roles`
+
+#### 1- public key error . i solve it by giving the key a secure permisions **chmod 400 key.pem**
+
+#### 2- ModuleNotFoundError: No module named 'ansible.module_utils.six.moves'
+
+#### it's an error displayed when running the ansible roles using jenkins . i solved it by using python 3.10.12 version with ansible core 2.17
+
+### With `Jenkins`
+
+#### 1- before using jenkins u have to install java 11 or java 17 to be able to work
+
+### With `SonarQube`
+
+#### 1-  first create postgresql database then link it to sonarqube to be able to work
+
+
 
 
 
