@@ -184,6 +184,12 @@ ansible-galaxy init sonarqube
 ansible-playbook -i inventory playbook.yml
 ```
 
+### Show the tasks while Running
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/21b90e83-1154-4f5d-8349-9bdff8afca01" width="1000">
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/3225573e-3c1d-4608-a801-16423270db40" width="1000">
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/15a7e899-25e1-472d-9bc5-240936e14a2e" width="1000">
+
+
 
 
 
