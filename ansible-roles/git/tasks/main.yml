@@ -1,4 +1,4 @@
-- name: Install Git inside Jenkins container
+- name: Update apt Cache
   command: docker exec -u 0 jenkins apt-get update
   ignore_errors: yes
 
