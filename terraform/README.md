@@ -247,7 +247,6 @@ This command calculates and shows the changes that Terraform will apply when you
 ```bash
 terraform apply
 ```
-terraform apply
 ### Purpose:
 
 terraform apply applies the changes required to achieve the desired state defined in your Terraform configuration.
