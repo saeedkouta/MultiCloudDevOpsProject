@@ -198,6 +198,8 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 #### Overview
 [**Openshift README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/README.md)
 
+This README file details the creation and use of openshift deployment. It includes comprehensive steps, configuration details, and screenshots of openshift deployment and service.
+
 ### Step 2: Create ServiceAccount and give it role then Extract the token
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/84c45259-c4a8-47a0-ac33-ffdc0154b75f" width="1000" >
 
@@ -215,7 +217,6 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 - **Continuous Integration**: Integrates with CI/CD tools to provide real-time feedback on code quality during the development process.
 
 #### 1- When Accessing sonarqube for the first time its username and password is admin and sonarqube will ask u to change the password before using it
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c3ba88b5-4386-4d3a-b83f-28e4f6a3c6e7" width="1000" >
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c3ba88b5-4386-4d3a-b83f-28e4f6a3c6e7" width="1000" >
 
 #### 2- Create Project :
@@ -296,7 +297,7 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 ### the Screenshots of OpenShift components that Created is in the [openshift README file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/openshift/README.md) 
 
 ### The Application WebPage:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/79486577-0007-4f28-b305-6fa696ffa290" width="1000" >
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/901f53fb-f0a7-437f-80a8-29d630039f2e" width="1000" >
 
 
 
