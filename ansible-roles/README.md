@@ -146,39 +146,43 @@ ansible-galaxy init openshift
 #### task 5: Ensure oc CLI is executable
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
 
-### 5- Create sonarqube role:
+### 5- Create [sonarqube role](https://github.com/saeedkouta/MultiCloudDevOpsProject/tree/dev/ansible-roles/sonarqube):
 ```bash
 ansible-galaxy init sonarqube
 ```
 
 #### in this role i will create postegresql container first then create a database linked to the sonarqube container because it will be required to make the sonarqube container up and running
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+####  task 1: Create Docker volumes for SonarQube
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/aeaf76c8-54c3-416b-8708-306a87d2ccc2" width="1000">
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+####  task 2: Pull PostgreSQL image
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/94f81037-e268-4639-80b8-ed20e7b61bb8" width="1000">
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+####  task 3: Run PostgreSQL container
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/f983c77f-0397-4481-a1b0-0b4383127e06" width="1000">
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+####  task 4: Pull SonarQube image
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/2968afd3-f7e2-4031-b4d9-1f51423186a2" width="1000">
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+####  task 5: Run SonarQube container
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/adb6890b-a7de-4bd8-bf15-2416e469a2f4" width="1000">
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+### After Create the roles Create the following file
 
-####  task 1:
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8ac114af-d3d6-4f74-ba1f-7bc97b3c0e50" width="1000">
+### Create [inventory file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/inventory)
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/2f7d8a9d-bcd8-4468-bc08-0c37ef520693" width="1000">
 
+### Create [ansible.cfg file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/ansible.cfg)
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c69b72ed-51b8-4734-a545-af8fc5313015" width="1000">
 
+### Create [playbook.yml file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/playbook.yml)
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/6928e064-9d64-4677-b126-0fbf98255dc2" width="1000">
 
-
-
-
+### use this command to run the playbook file
+```bash
+ansible-playbook -i inventory playbook.yml
+```
 
 
 
