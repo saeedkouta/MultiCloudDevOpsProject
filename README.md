@@ -124,17 +124,17 @@ This README file details the creation and use of Ansible Roles for automation ta
 
 #### To Add Credintials go to `manage jenkins` > `Credintials`
 
-###### 1.1 GitHub Credentials
+#### 1.1 GitHub Credentials
 
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/a7f7321e-c5b8-4ef8-af36-0534a55f8fcc" width="1000" >
 
-###### 1.2. AWS Access Key
+#### 1.2. AWS Access Key
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8f4357dc-a5ed-4bb7-a04d-00d765c7f3aa" width="1000" >
 
-###### 1.3. AWs Secret Access Key
+#### 1.3. AWs Secret Access Key
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/a7493c72-a904-4165-801c-4fd2a5c972b7" width="1000" >
 
-###### 1.4. The SSH Key Pair
+#### 1.4. The SSH Key Pair
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/e951deee-1854-4d55-8f5a-3c3bd68e6734" width="1000" >
 
 ### Step 5: Create and Build The pipeline
