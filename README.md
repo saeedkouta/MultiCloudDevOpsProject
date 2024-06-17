@@ -128,24 +128,24 @@ This README file details the creation and use of Ansible Roles for automation ta
 
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/a7f7321e-c5b8-4ef8-af36-0534a55f8fcc" width="1000" >
 
-#### 1.2. AWS Access Key
+#### 1.2. AWS Access Key:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/8f4357dc-a5ed-4bb7-a04d-00d765c7f3aa" width="1000" >
 
-#### 1.3. AWs Secret Access Key
+#### 1.3. AWS Secret Access Key:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/a7493c72-a904-4165-801c-4fd2a5c972b7" width="1000" >
 
-#### 1.4. The SSH Key Pair
+#### 1.4. The SSH Key Pair:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/e951deee-1854-4d55-8f5a-3c3bd68e6734" width="1000" >
 
 ### Step 5: Create and Build The pipeline
 
-#### 1- Create A new Pipeline
+#### 1- Create A new Pipeline:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/535652d7-e17b-4503-b374-a6d01e3406a9" width="1000" >
 
-#### 2- Add the repo and the github credintials and choose the branch
+#### 2- Add the repo and the github credintials and choose the branch:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c85fe234-daf5-4db7-97c1-8b50f09f0443" width="1000" >
 
-#### 3- Add the name of the jenkinsfile
+#### 3- Add the name of the jenkinsfile:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/e94f3cae-5bdc-4f52-bdbb-47f348e0c67f" width="1000" >
 
 #### 4- Build the pipeline:
@@ -198,7 +198,10 @@ OpenShift is a Kubernetes-based platform that provides a robust and scalable env
 #### Overview
 [**Openshift README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/README.md)
 
-### Step 2: Access to the SonarQube Container
+### Step 2: Create ServiceAccount and give it role then Extract the token
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/84c45259-c4a8-47a0-ac33-ffdc0154b75f" width="1000" >
+
+### Step 3: Access to the SonarQube Container
 
 #### SonarQube Overview
 
