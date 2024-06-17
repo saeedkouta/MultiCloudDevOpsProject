@@ -44,7 +44,7 @@ To use an Ansible role in your playbook, include it by its name within the `role
 | [OpenShift CLI ](https://github.com/saeedkouta/ansible-roles/tree/main/oc_cli) | Installs and configures the OpenShift Command Line Interface (CLI) tool on hosts for managing OpenShift clusters. |
 | [SonarQube](https://github.com/saeedkouta/ansible-roles/tree/main/sonarqube) | Sets up SonarQube for continuous inspection of code quality, integrating with CI/CD pipelines for early issue detection. Requires PostgreSQL database to be up and running. |
 
-## Create Ansible Roles
+## Create Ansible Roles:
 
 #### use this command to create ansible role folders
 ```bash
@@ -168,18 +168,18 @@ ansible-galaxy init sonarqube
 ####  task 5: Run SonarQube container
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/adb6890b-a7de-4bd8-bf15-2416e469a2f4" width="1000">
 
-### After Create the roles Create the following file
+### After Create the roles Create the following file:
 
-### Create [inventory file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/inventory)
+### Create [inventory file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/inventory):
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/2f7d8a9d-bcd8-4468-bc08-0c37ef520693" width="1000">
 
-### Create [ansible.cfg file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/ansible.cfg)
+### Create [ansible.cfg file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/ansible.cfg):
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/c69b72ed-51b8-4734-a545-af8fc5313015" width="1000">
 
-### Create [playbook.yml file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/playbook.yml)
+### Create [playbook.yml file](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/playbook.yml):
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/6928e064-9d64-4677-b126-0fbf98255dc2" width="1000">
 
-### use this command to run the playbook file
+### use this command to run the playbook file:
 ```bash
 ansible-playbook -i inventory playbook.yml
 ```
