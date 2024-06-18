@@ -346,7 +346,7 @@ This README file details the creation and use of openshift deployment. It includ
 
 #### 1- make sure to specify the ec2 storage
 
-#### 2- create s3 bucket and dynamoDB table Beform run backend module
+#### 2- create s3 bucket and dynamoDB table Before run backend module
 
 ### With `Ansible-Roles`
 
