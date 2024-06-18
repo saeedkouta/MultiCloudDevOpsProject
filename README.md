@@ -114,7 +114,7 @@ The primary purpose of Ansible is to automate IT tasks that are repetitive, comp
 By leveraging Ansible, organizations can achieve greater operational efficiency, improve scalability, ensure compliance, and accelerate time-to-value for their IT infrastructure and applications.
 
 #### Overview
-[**Ansible Playbooks README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/README.md)
+[**Ansible Roles README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/README.md)
 
 This README file details the creation and use of Ansible Roles for automation tasks. It includes comprehensive steps, configuration details, and screenshots illustrating the setup and execution of each role.
 
@@ -381,18 +381,3 @@ This table provides links to helpful documentation for the used tools and techno
 | Spring Boot | [Spring Boot Documentation](https://spring.io/guides/spring-boot/) |
 | GitHub | [GitHub Documentation](https://docs.github.com/) |
 | AWS | [AWS Documentation](https://aws.amazon.com/documentation/) |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
