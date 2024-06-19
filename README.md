@@ -10,7 +10,7 @@ This project utilizes Jenkins pipelines to automate infrastructure provisioning,
 ```bash
 ├── ansible-roles
 ├── application
-├── load-srcipt
+├── srcipts
 ├── openshift
 ├── screenshots
 ├── terraform
