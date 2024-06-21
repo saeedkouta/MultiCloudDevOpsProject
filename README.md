@@ -1,6 +1,6 @@
-# Project Overview
+# MultiCloudDevOpsProject
 
-This project utilizes Jenkins pipelines to automate infrastructure provisioning, application deployment, and integration using Terraform, Ansible, Docker, Jenkins, Git, OpenShift CLI (oc), SonarQube, and PostgreSQL. It consists of two main pipelines orchestrated through Jenkins:
+This extensive DevOps pipeline incorporates Docker for containerization, Ansible for configuration management, Jenkins for continuous integration, Terraform for infrastructure provisioning, and OpenShift for deployment. The workflow utilizes two Jenkins pipelines and integrates SonarQube for code quality analysis, ensuring a smooth and effective process by automating the deployment of a sample application to OpenShift. It also includes AWS services and integrates logging and monitoring.
 
 ## Project Diagram
 
