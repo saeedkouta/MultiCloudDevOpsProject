@@ -337,7 +337,7 @@ This README file details the creation and use of openshift deployment. It includ
 #### 1- Create Pull Request to add the changes to the main branch:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/0f74baf5-0131-4eb2-9883-04fc88acbf7e" width="1000" >
 
-#### 2- Mergie pull request:
+#### 2- Merge pull request:
 <img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/ec942d90-309f-458a-8f62-29977fd5e56d" width="1000" >
 
 ## Troubleshooting
