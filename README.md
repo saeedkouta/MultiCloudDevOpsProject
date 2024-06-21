@@ -344,7 +344,7 @@ This README file details the creation and use of openshift deployment. It includ
 
 ### With `Terraform`
 
-#### 1- make sure to specify the ec2 storage
+#### 1- make sure to increase the ec2 storage. make it at least 20 GB
 
 #### 2- create s3 bucket and dynamoDB table Before run backend module
 
