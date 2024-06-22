@@ -4,18 +4,94 @@ This extensive DevOps pipeline incorporates Docker for containerization, Ansible
 
 ## Project Diagram
 
-<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/f3fad849-c43d-4630-bb15-50102cc850d0.svg" >
+<img src="https://github.com/saeedkouta/MultiCloudDevOpsProject/assets/167209058/9b478343-8a6c-4c39-8eb1-d5c90dd8db17.svg" >
 
 ## Project Structure
 ```bash
-├── ansible-roles
-├── application
-├── srcipts
-├── openshift
-├── screenshots
 ├── terraform
+│   ├── main.tf
+│   ├── output.tf
+│   ├── modules
+│   │   ├── backend
+│   │   │   └── main.tf
+│   │   ├── cloudwatch
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── dynamoDB
+│   │   │   └── main.tf
+│   │   ├── ec2
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── internet_gateway
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── provider
+│   │   │   ├── main.tf
+│   │   │   └── variables.tf
+│   │   ├── route_table
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── s3
+│   │   │   └── main.tf
+│   │   ├── security_group
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── sns
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   ├── subnet
+│   │   │   ├── main.tf
+│   │   │   ├── output.tf
+│   │   │   └── variables.tf
+│   │   └── vpc
+│   │       ├── main.tf
+│   │       ├── output.tf
+│   │       └── variables.tf
+│   └── README.md
+├── ansible-roles
+│   ├── playbook.yml
+│   ├── ansible.cfg
+│   ├── inventory
+│   ├── ivolve1.pem
+│   ├── docker
+│   │   └── tasks
+│   │       └── main.yml
+│   ├── git
+│   │   └── tasks
+│   │       └── main.yml
+│   ├── jenkins
+│   │   └── tasks
+│   │       └── main.yml
+│   ├── openshift
+│   │   └── tasks
+│   │       └── main.yml
+│   ├── sonarqube
+│   │   └── tasks
+│   │       └── main.yml
+│   └── README.md
 ├── Jenkinsfile-01
 ├── Jenkinsfile-02
+├── application
+├── openshift
+│   ├── deployment.yml
+│   ├── service.yml 
+│   └── README.md
+├── scripts
+│   └── load-script.sh
+├── shared_library
+│   ├── README.md
+│   └── vars
+│       ├── gitcheckout.groovy
+│       ├── unitTests.groovy
+│       ├── sonarQubeAnalysis.groovy
+│       ├── buildAndPushDockerImage.groovy
+│       └── deployToOpenShift.groovy
 └── README.md
 ```
 
