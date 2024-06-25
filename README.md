@@ -301,7 +301,7 @@ pipelines utilize a shared library in Jenkins to encapsulate and reuse pipeline 
 OpenShift is a Kubernetes-based platform that provides a robust and scalable environment for container orchestration and application deployment. Its purpose is to streamline the development, deployment, and management of containerized applications by offering a comprehensive suite of developer and operational tools, integrated CI/CD pipelines, automated scaling, and application monitoring capabilities. OpenShift aims to enhance productivity, ensure application reliability, and foster rapid innovation by providing a consistent and secure infrastructure across hybrid and multi-cloud environments
  
 #### Overview
-[**Openshift README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/ansible-roles/README.md)
+[**Openshift README file**](https://github.com/saeedkouta/MultiCloudDevOpsProject/blob/dev/openshift/README.md)
 
 This README file details the creation and use of openshift deployment. It includes comprehensive steps, configuration details, and screenshots of openshift deployment and service.
 
