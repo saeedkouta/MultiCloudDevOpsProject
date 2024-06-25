@@ -116,7 +116,7 @@ The first Jenkins pipeline focuses on automating infrastructure provisioning and
 
 - **Stage 5: Fetch Public IP**:
   - Retrieves the public IP address of deployed resources, such as EC2 instances.
-  - Stores the public IP in a variable or file for further use.
+  - Update the inventory file with the Public IP of the EC2
 
 - **Stage 6: Run Ansible Roles**:
   - Configures deployed infrastructure using Ansible roles.
